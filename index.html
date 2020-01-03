@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PWA Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- App Manifest -->
+    <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+    <main>
+        <ul class="nav">
+            <li>
+                <a href="#" class="active">Home</a>
+            </li>
+            <li>
+                <a href="./about.html">About</a>
+            </li>
+            <li>
+                <a href="./cache.html">Cache</a>
+            </li>
+        </ul>
+        <h1>PWA Demo</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.
+        </p>
+        <img src="./images/img01.jpg" alt="">
+    </main>
+
+    <!-- Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            // Do a one-off check to see if a service worker's in control.
+            if (navigator.serviceWorker.controller) {
+                navigator.serviceWorker.register("/sw.js").then(function (reg) {
+                    console.log("Service worker has been registered for scope: " + reg.scope);
+                });
+            } else {
+                console.log('This page is not currently controlled by a service worker.');
+            }
+        } else {
+            console.log('Service workers are not supported.');
+        }
+
+        // if (!navigator.serviceWorker.controller) {
+        //     navigator.serviceWorker.register("/sw.js").then(function (reg) {
+        //         console.log("Service worker has been registered for scope: " + reg.scope);
+        //     });
+        // }
+    </script>
+</body>
+
+</html>
