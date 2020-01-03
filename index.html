@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./style.css">
     <!-- App Manifest -->
     <link rel="manifest" href="./manifest.json">
+    <!-- iOS Home icon -->
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 </head>
 
 <body>
@@ -39,9 +41,9 @@
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function () {
                 navigator.serviceWorker.register('./sw.js').then(function (registration) {
-                    console.log('Service worker successfully registered on scope', registration.scope);
+                    alert('Service worker successfully registered on scope', registration.scope);
                 }).catch(function (error) {
-                    console.log('Service worker failed to register', error);
+                    alert('Service worker failed to register', error);
                 });
             });
         }

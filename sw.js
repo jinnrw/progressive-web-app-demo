@@ -2,11 +2,17 @@ self.addEventListener("install", function(event) {
     event.waitUntil(preLoad());
   });
   
+  var urlsToCache = [
+    './cache.html',
+    './offline.html',
+    './style.css'
+  ];
+
   var preLoad = function(){
-    console.log("Installing web app");
+    alert("Installing web app");
     return caches.open("offline").then(function(cache) {
       console.log("caching index and important routes");
-      return cache.addAll(["./cache.html", "./offline.html"]);
+      return cache.addAll(urlsToCache);
     });
   };
   
