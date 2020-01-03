@@ -5,7 +5,7 @@
   "background_color": "#f2f2f2",
   "display": "browser",
   "Scope": "/",
-  "start_url": "/",
+  "start_url": "https://jinnrw.github.io/progressive-web-app-demo",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
