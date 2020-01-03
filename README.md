@@ -10,3 +10,4 @@ Service worker provides ability to cache app resources. Be it JavaScript files o
 
 ### References:
 - https://blog.heroku.com/how-to-make-progressive-web-app
+- https://developers.google.com/web/fundamentals/primers/service-workers
