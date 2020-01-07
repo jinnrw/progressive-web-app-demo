@@ -39,3 +39,11 @@ img {
     width: 100%;
     max-width: 500px;
 }
+
+
+/* Testing Codes */
+@media only screen and (max-height: 500px) {
+    body {
+        color: lightblue;
+    }
+}
